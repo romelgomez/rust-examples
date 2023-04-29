@@ -1,9 +1,11 @@
 pub fn statements() {
-    // statement does not return values
     let y = 6;
+
+    println!("statement does not return values");
+    println!("The value of y is: {}", y);
 }
 
-pub fn statements_vs_expressions() {
+pub fn expressions() -> (i32, i32) {
     let x = 2 + 6;
 
     let y = {
@@ -11,5 +13,5 @@ pub fn statements_vs_expressions() {
         x + 1
     };
 
-    println!("x: {}, y: {}", x, y);
+    (x, y)
 }

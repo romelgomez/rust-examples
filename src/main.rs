@@ -1,7 +1,9 @@
 mod fibonacci;
+mod function_order_call;
 mod loops;
 mod lyrics;
 mod math_functions;
+mod statements_vs_expressions;
 mod temp_conversion;
 
 fn main() {
@@ -27,15 +29,13 @@ fn main() {
     let lyrics_test = lyrics::twelve_days_of_christmas();
     println!("{}", lyrics_test);
 
-    // before_function();
-    // after_function();
-    // statements_vs_expressions();
+    function_order_call::after_function();
+    function_order_call::before_function();
 
-    // let expression_value = expressions();
-    // let statements_value = statements();
+    statements_vs_expressions::statements();
+    let (x, y) = statements_vs_expressions::expressions();
 
-    // println!("expression_value: {}", expression_value);
-    // println!("statements_value: {}", statements_value);
+    println!("expression_value: x:{}, y:{}", x, y);
 
     loops::countdown();
     loops::faster_safe_loop();
